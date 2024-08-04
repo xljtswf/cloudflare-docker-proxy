@@ -12,23 +12,22 @@ TARGET_UPSTREAM = "https://registry-1.docker.io"
 
 [env.production]
 name = "cloudflare-docker-proxy"
-# routes = [
-#   { pattern = "docker.libcuda.so", custom_domain = true },
-#   { pattern = "quay.libcuda.so", custom_domain = true },
-#   { pattern = "gcr.libcuda.so", custom_domain = true },
-#   { pattern = "k8s-gcr.libcuda.so", custom_domain = true },
-#   { pattern = "k8s.libcuda.so", custom_domain = true },
-#   { pattern = "ghcr.libcuda.so", custom_domain = true },
-#   { pattern = "cloudsmith.libcuda.so", custom_domain = true },
-# ]
-
+routes = [
+  { pattern = "docker.zw245.top", custom_domain = true },
+  { pattern = "quay.zw245.top", custom_domain = true },
+  { pattern = "gcr.zw245.top", custom_domain = true },
+  { pattern = "k8s-gcr.zw245.top", custom_domain = true },
+  { pattern = "k8s.zw245.top", custom_domain = true },
+  { pattern = "ghcr.zw245.top", custom_domain = true },
+  { pattern = "cloudsmith.zw245.top", custom_domain = true },
+]
 [env.production.vars]
 MODE = "production"
 TARGET_UPSTREAM = ""
 
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
-# route = { pattern = "docker-staging.libcuda.so", custom_domain = true }
+route = { pattern = "docker-staging.zw245.top", custom_domain = true }
 
 [env.staging.vars]
 MODE = "staging"
